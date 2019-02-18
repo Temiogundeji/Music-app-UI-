@@ -1,3 +1,6 @@
+*{
+    box-sizing:border-box;
+}
 html{
     box-sizing:border-box;
     height:100%;
@@ -9,15 +12,11 @@ body{
     height:100%;
     margin:0;
     font-family: Lato, sans-serif;
-    color: #fff;
+    color: #222;
     font-size: 0.9em;
-}
-body > div{
-    /* padding:10px; */
 }
 main{
     flex:1 0 auto;
-    color: #fff;
     display:flex;
    
 }
@@ -33,10 +32,10 @@ aside i.fa{
     color:#444;
     font-size:0.9em;
 }
-.content{
+section.content{
     display:flex;
     flex-direction:column;
-    flex:1 1 auto;
+    flex:1 0 auto;
 }
 section.content .music-head{
     flex:0 0 280px;
@@ -62,8 +61,16 @@ li{
     padding:0 20px;
     min-height:50px;
 }
-.catty-music div:nth-child(1){
-    margin-bottom:auto;
+li p{
+    flex:0 0 25%;
+}
+li span.catty-cloud {
+    border:1px solid black;
+    font-size:0.6em;
+    padding:3px;
+}
+li:nth-child(2n){
+    background-color: #f2f2f2;
 }
 .catty-music div:nth-child(1) p:not(:first-child){
     font-size:0.9em;
@@ -76,9 +83,32 @@ li{
 .catty-music div:nth-child(1){
 	margin-bottom: auto;
 }
+.catty-music div:nth-child(2){
+    margin-top:0;
+}
+.catty-music div:nth-child(2) i.fa{
+    font-size:0.9em;
+    padding:0 0.7em;
+    font-weight:300px;
+}
 footer{
+    display:flex;
     background-color: rgba(61, 100, 158, .9);
     flex:0 0 90px;
-    font-size:0.9em;
+    padding:10px;
     color: #fff;
+}
+.catty-music-small{
+    display: flex;
+    margin-right:auto;
+}
+.catty-music-small img{
+    padding-right:10px;
+    width:100px;
+}
+.catty-music-controls{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    width:50%;
 }
