@@ -94,7 +94,7 @@ li:nth-child(2n){
 footer{
     display:flex;
     background-color: rgba(61, 100, 158, .9);
-    flex:0 0 90px;
+    flex: 0 0 90px;
     padding:10px;
     color: #fff;
 }
@@ -112,4 +112,40 @@ footer{
     justify-content: space-between;
     width:50%;
 }
-/******------------STYLE FOR CSS MEDIA QUERY----------*******/
+/**
+Mobile responsiveness
+===================================================
+**/
+@media screen and (max-width:64em){
+    .sm-hide{
+        display:none;
+    }
+    .sm-text-center{
+        text-align:center;
+    }
+    .sm-text-right{
+        text-align:right;
+    }
+    section.content .music-head{
+        flex:0 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    section.content .music-head .catty-music{
+        padding:0;
+    }
+    .music-head img{
+        width:150px;
+    }
+    .catty-music div:nth-child(1) p:first-child{
+        margin:20px 0;
+        font-size:1em;
+    }
+    li p{
+        flex:0 0 50%;
+    }
+    .catty-music-controls{
+        justify-content: space-around;
+    }
+}
